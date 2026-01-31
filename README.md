@@ -14,7 +14,7 @@ A comprehensive Laravel package for integrating with the Tempo Cloud REST API v4
 
 ## Requirements
 
-- PHP >= 8.4
+- PHP >= 8.2
 - Laravel >= 11.0 or >= 12.0
 - Guzzle HTTP client
 - OAuth2 client library
