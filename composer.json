@@ -1,0 +1,56 @@
+{
+  "name": "ninohaar/laravel-tempo-api",
+  "description": "Laravel package for comprehensive Tempo Cloud REST API integration with v4 endpoints",
+  "type": "library",
+  "keywords": [
+    "tempo",
+    "jira",
+    "tempo-api",
+    "laravel",
+    "rest-api",
+    "time-tracking"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nino Haar",
+      "email": "nino.haar@indicia.nl"
+    }
+  ],
+  "require": {
+    "php": "^8.4",
+    "illuminate/support": "^11.0|^12.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "league/oauth2-client": "^2.6",
+    "netresearch/jsonmapper": "^4.0",
+    "monolog/monolog": "^2.0|^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "mockery/mockery": "^1.4",
+    "orchestra/testbench": "^9.0",
+    "laravel/pint": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "NinoHaar\\Tempo\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NinoHaar\\Tempo\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NinoHaar\\Tempo\\TempoServiceProvider"
+      ],
+      "aliases": {
+        "Tempo": "NinoHaar\\Tempo\\Facades\\Tempo"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
