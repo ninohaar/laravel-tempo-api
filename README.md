@@ -42,13 +42,15 @@ Add the package repository to your Laravel project's `composer.json`:
 composer require ninohaar/laravel-tempo-api
 ```
 
-### 3. Publish Configuration
+### 3. Publish Configuration (Optional)
+
+Optionally publish the configuration file to customize settings:
 
 ```bash
 php artisan vendor:publish --provider="NinoHaar\Tempo\TempoServiceProvider" --tag=tempo-config
 ```
 
-This creates `config/tempo.php` in your project.
+This creates `config/tempo.php` in your project. The package works with default configuration loaded from `.env`.
 
 ### 4. Configure Environment Variables
 

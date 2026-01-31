@@ -34,11 +34,6 @@ class TempoServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        // Publish configuration
-        $this->publishes([
-            __DIR__.'/../config/tempo.php' => config_path('tempo.php'),
-        ], 'tempo-config');
-
         $this->mergeConfigFrom(__DIR__.'/../config/tempo.php', 'tempo');
 
         // Core services
@@ -74,6 +69,11 @@ class TempoServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // Publish configuration
+        $this->publishes([
+            __DIR__.'/../config/tempo.php' => config_path('tempo.php'),
+        ], 'tempo-config');
+
         // Register webhook route
         $this->registerWebhookRoute();
     }
